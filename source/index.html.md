@@ -3,6 +3,7 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
+  - curl
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
