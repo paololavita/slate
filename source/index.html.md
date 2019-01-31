@@ -80,7 +80,7 @@ api.kittens.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "http://carerelay.com/api/carerelay"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -116,7 +116,7 @@ This endpoint retrieves all Products/Services
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://carerelay.com/api/carerelay`
 
 ### Query Parameters
 
@@ -146,7 +146,7 @@ api.kittens.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://carerelay.com/api/carerelay/2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -202,7 +202,7 @@ api.kittens.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://carerelay.com/api/carerelay/2"
   -X DELETE
   -H "Authorization: meowmeowmeow"
 ```
@@ -252,7 +252,7 @@ api.kittens.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://carerelay.com/api/carerelay/2"
   -X DELETE
   -H "Authorization: meowmeowmeow"
 ```
@@ -277,13 +277,13 @@ This endpoint retrieves a specific Time/Date Estimate.
 
 ### HTTP Request
 
-`DELETE http://example.com/rita/<ID>`
+`DELETE http://example.com/carerelay/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of Rita to delete
+ID | The ID of carerelay to delete
 
 # Query Products/Services
 
@@ -304,7 +304,7 @@ api.kittens.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "http://carerelay.com/api/carerelay"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -340,7 +340,7 @@ This endpoint retrieves all Products/Services
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://carerelay.com/api/carerelay`
 
 ### Query Parameters
 
@@ -370,7 +370,7 @@ api.kittens.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://carerelay.com/api/carerelay/2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -424,7 +424,7 @@ api.kittens.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "http://carerelay.com/api/carerelay"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -460,7 +460,7 @@ This endpoint retrieves all Products/Services
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://carerelay.com/api/carerelay`
 
 ### POST Service Request Details
 Parameter | Default | Description
@@ -489,7 +489,7 @@ api.kittens.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://carerelay.com/api/carerelay/2"
   -H "Authorization: meowmeowmeow"
 ```
 
