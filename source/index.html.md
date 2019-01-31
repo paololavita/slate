@@ -26,39 +26,39 @@ Making requests to API endpoints gives one everything needed to create new servi
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `carecaptain` with your API key.
 
-CareRelay uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+CareRelay uses API keys to allow access to the API. You can register a new CareRelay API key at our [developer portal](http://carerelay.com/developers).
 
 CareRelay expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: carecaptain`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>carecaptain</code> with your personal API key.
 </aside>
 
 # Query Products/Services
@@ -66,28 +66,28 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 ## List Products/Services
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.get
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.get()
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let kittens = api.kittens.get();
 ```
 
@@ -126,34 +126,34 @@ include_services | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
 
 <aside class="success">
-Remember — a happy customer is an authenticated kitten!
+Remember — a happy customer is an authenticated member!
 </aside>
 
 ## Get a Product/Service
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.get(2)
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.get(2)
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay/2"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let max = api.kittens.get(2);
 ```
 
@@ -188,29 +188,29 @@ ID | The ID of the Product/Service to retrieve
 ## Get Estimate/Price
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.delete(2)
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.delete(2)
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay/2"
   -X DELETE
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let max = api.kittens.delete(2);
 ```
 
@@ -238,29 +238,29 @@ ID | The ID of the kitten to delete
 ## Get Time/Date Estimates
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.delete(2)
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.delete(2)
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay/2"
   -X DELETE
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let max = api.kittens.delete(2);
 ```
 
@@ -290,28 +290,28 @@ ID | The ID of carerelay to delete
 ## List Products/Services
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.get
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.get()
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let kittens = api.kittens.get();
 ```
 
@@ -356,28 +356,28 @@ Remember — a happy customer is an authenticated kitten!
 ## Get a Service Request Details
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.get(2)
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.get(2)
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay/2"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let max = api.kittens.get(2);
 ```
 
@@ -410,28 +410,28 @@ ID | The ID of the Product/Service to retrieve
 ## POST Service Requests
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.get
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.get()
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let kittens = api.kittens.get();
 ```
 
@@ -475,28 +475,28 @@ Remember — a happy customer is an authenticated kitten!
 ## GET Service Request Details by ID
 
 ```ruby
-require 'kittn'
+require 'cri'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = cri::APIClient.authorize!('carecaptain')
 api.kittens.get(2)
 ```
 
 ```python
-import kittn
+import cri
 
-api = kittn.authorize('meowmeowmeow')
+api = cri.authorize('carecaptain')
 api.kittens.get(2)
 ```
 
 ```shell
 curl "http://carerelay.com/api/carerelay/2"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: carecaptain"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const cri = require('cri');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = cri.authorize('carecaptain');
 let max = api.kittens.get(2);
 ```
 
