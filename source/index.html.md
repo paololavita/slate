@@ -17,11 +17,9 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+The CareRelay API is a RESTful API that is designed to allow one to get, create, update, & delete objects with the HTTP verbs GET, POST, PUT, PATCH, & DELETE.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Making requests to API endpoints gives one everything needed to create new service requests, update/edit, schedule, complete, and bill for services.
 
 # Authentication
 
@@ -63,9 +61,9 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Query Products/Services
 
-## Get All Kittens
+## List Products/Services
 
 ```ruby
 require 'kittn'
@@ -114,7 +112,7 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all Products/Services
 
 ### HTTP Request
 
@@ -124,14 +122,14 @@ This endpoint retrieves all kittens.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
+include_services | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy customer is an authenticated kitten!
 </aside>
 
-## Get a Specific Kitten
+## Get a Product/Service
 
 ```ruby
 require 'kittn'
@@ -171,7 +169,7 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific Product/Service
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
@@ -183,9 +181,11 @@ This endpoint retrieves a specific kitten.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the Product/Service to retrieve
 
-## Delete a Specific Kitten
+# Query Products/Services
+
+## Get Estimate/Price
 
 ```ruby
 require 'kittn'
@@ -223,7 +223,7 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint retrieves a specific Quote/Price
 
 ### HTTP Request
 
@@ -235,7 +235,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
-## Delete a Specific Rita
+## Get Time/Date Estimates
 
 ```ruby
 require 'kittn'
@@ -273,7 +273,7 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific Rita.
+This endpoint retrieves a specific Time/Date Estimate.
 
 ### HTTP Request
 
