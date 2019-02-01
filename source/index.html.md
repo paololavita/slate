@@ -175,7 +175,7 @@ This endpoint retrieves a specific Product/Service
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/kittens/`
 
 ### URL Parameters
 
@@ -227,7 +227,7 @@ This endpoint retrieves a specific Quote/Price
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE http://example.com/kittens/`
 
 ### URL Parameters
 
@@ -277,7 +277,7 @@ This endpoint retrieves a specific Time/Date Estimate.
 
 ### HTTP Request
 
-`DELETE http://example.com/carerelay/<ID>`
+`DELETE http://example.com/carerelay/`
 
 ### URL Parameters
 
@@ -397,7 +397,7 @@ This endpoint creates a Service Request.
 
 ### HTTP Request
 
-`POST http://carerelay.com/request/<ID>`
+`POST http://carerelay.com/request/`
 
 ### URL Parameters
 
@@ -518,7 +518,7 @@ This endpoint retrieves a specific Product/Service
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/kittens/`
 
 ### URL Parameters
 
