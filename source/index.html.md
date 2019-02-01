@@ -192,7 +192,7 @@ let kittens = api.kittens.get();
       },
 ```
 
-This endpoint retrieves all Products/Services
+__This endpoint retrieves all Products/Services__
 
 ### HTTP Request
 
@@ -269,7 +269,7 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific Product/Service
+__This endpoint retrieves a specific Product/Service__
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
