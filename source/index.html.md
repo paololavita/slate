@@ -773,3 +773,120 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the Product/Service to retrieve
 
+# Update/Edit Service Requests
+
+## Update Service Requests
+
+```ruby
+require 'cri'
+
+api = cri::APIClient.authorize!('carecaptain')
+api.kittens.get
+```
+
+```python
+import cri
+
+api = cri.authorize('carecaptain')
+api.kittens.get()
+```
+
+```shell
+curl "http://carerelay.com/api/carerelay"
+  -H "Authorization: carecaptain"
+```
+
+```javascript
+const cri = require('cri');
+
+let api = cri.authorize('carecaptain');
+let kittens = api.kittens.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "picture": "https://d1w2poirtb3as9.cloudfront.net/f3be498cb0bbf570aa3d.jpeg",
+  "first_name": "Uber",
+  "last_name": "Developer",
+  "uuid": "f4a416e3-6016-4623-8ec9-d5ee105a6e27",
+  "rider_id": "8OlTlUG1TyeAQf1JiBZZdkKxuSSOUwu2IkO0Hf9d2HV52Pm25A0NvsbmbnZr85tLVi-s8CckpBK8Eq0Nke4X-no3AcSHfeVh6J5O6LiQt5LsBZDSi4qyVUdSLeYDnTtirw==",
+  "email": "uberdevelopers@gmail.com",
+  "mobile_verified": true,
+  "promo_code": "uberd340ue"
+}
+```
+
+This endpoint retrieves all Products/Services
+
+### HTTP Request
+
+`GET http://carerelay.com/api/carerelay`
+
+### POST Service Request Details
+Parameter | Default | Description
+--------- | ------- | -----------
+include_services | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy customer is an authenticated kitten!
+</aside>
+
+## Delete Service Request Details by ID
+
+```ruby
+require 'cri'
+
+api = cri::APIClient.authorize!('carecaptain')
+api.kittens.get(2)
+```
+
+```python
+import cri
+
+api = cri.authorize('carecaptain')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://carerelay.com/api/carerelay/2"
+  -H "Authorization: carecaptain"
+```
+
+```javascript
+const cri = require('cri');
+
+let api = cri.authorize('carecaptain');
+let max = api.kittens.get(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "picture": "https://d1w2poirtb3as9.cloudfront.net/f3be498cb0bbf570aa3d.jpeg",
+  "first_name": "Uber",
+  "last_name": "Developer",
+  "uuid": "f4a416e3-6016-4623-8ec9-d5ee105a6e27",
+  "rider_id": "8OlTlUG1TyeAQf1JiBZZdkKxuSSOUwu2IkO0Hf9d2HV52Pm25A0NvsbmbnZr85tLVi-s8CckpBK8Eq0Nke4X-no3AcSHfeVh6J5O6LiQt5LsBZDSi4qyVUdSLeYDnTtirw==",
+  "email": "uberdevelopers@gmail.com",
+  "mobile_verified": true,
+  "promo_code": "uberd340ue"
+}
+```
+
+This endpoint retrieves a specific Product/Service
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+
+### HTTP Request
+
+`GET http://example.com/kittens/`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Product/Service to retrieve
