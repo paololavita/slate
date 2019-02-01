@@ -270,6 +270,17 @@
               </ul>
           </li>
           <li>
+            <a href="#update-edit-service-requests" class="toc-h1 toc-link" data-title="Update/Edit Service Requests">Update/Edit Service Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#update-service-requests" class="toc-h2 toc-link" data-title="Update Service Requests">Update Service Requests</a>
+                  </li>
+                  <li>
+                    <a href="#delete-service-request-details-by-id" class="toc-h2 toc-link" data-title="Delete Service Request Details by ID">Delete Service Request Details by ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -939,6 +950,107 @@ Remember — a happy customer is an authenticated kitten!
 <h3 id='http-request-8'>HTTP Request</h3>
 <p><code>GET http://example.com/kittens/</code></p>
 <h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Product/Service to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='update-edit-service-requests'>Update/Edit Service Requests</h1><h2 id='update-service-requests'>Update Service Requests</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cri'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cri</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'carecaptain'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://carerelay.com/api/carerelay"</span>
+  -H <span class="s2">"Authorization: carecaptain"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cri</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cri'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cri</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1w2poirtb3as9.cloudfront.net/f3be498cb0bbf570aa3d.jpeg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Uber"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f4a416e3-6016-4623-8ec9-d5ee105a6e27"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rider_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8OlTlUG1TyeAQf1JiBZZdkKxuSSOUwu2IkO0Hf9d2HV52Pm25A0NvsbmbnZr85tLVi-s8CckpBK8Eq0Nke4X-no3AcSHfeVh6J5O6LiQt5LsBZDSi4qyVUdSLeYDnTtirw=="</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uberdevelopers@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"mobile_verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uberd340ue"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Products/Services</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET http://carerelay.com/api/carerelay</code></p>
+<h3 id='post-service-request-details-2'>POST Service Request Details</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_services</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy customer is an authenticated kitten!
+</aside>
+<h2 id='delete-service-request-details-by-id'>Delete Service Request Details by ID</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cri'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cri</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'carecaptain'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://carerelay.com/api/carerelay/2"</span>
+  -H <span class="s2">"Authorization: carecaptain"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cri</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cri'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cri</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1w2poirtb3as9.cloudfront.net/f3be498cb0bbf570aa3d.jpeg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Uber"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f4a416e3-6016-4623-8ec9-d5ee105a6e27"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rider_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8OlTlUG1TyeAQf1JiBZZdkKxuSSOUwu2IkO0Hf9d2HV52Pm25A0NvsbmbnZr85tLVi-s8CckpBK8Eq0Nke4X-no3AcSHfeVh6J5O6LiQt5LsBZDSi4qyVUdSLeYDnTtirw=="</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uberdevelopers@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"mobile_verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uberd340ue"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific Product/Service</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET http://example.com/kittens/</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
