@@ -57,10 +57,6 @@ CareRelay expects for the API key to be included in all API requests to the serv
 
 `Authorization: carecaptain`
 
-<aside class="notice">
-You must replace <code>carecaptain</code> with your personal API key.
-</aside>
-
 # Query Products/Services
 
 ## List Products/Services
@@ -205,9 +201,9 @@ Parameter | Default | Description
 include_services | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
 
-<aside class="success">
+/*<aside class="success">
 Remember — a happy customer is an authenticated member!
-</aside>
+</aside>*/
 
 ## Get a Product/Service Details
 
@@ -270,8 +266,6 @@ let max = api.kittens.get(2);
 ```
 
 __This endpoint retrieves a specific Product/Service__
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
@@ -703,7 +697,7 @@ This endpoint retrieves all Products/Services
 
 ### HTTP Request
 
-`GET http://carerelay.com/api/carerelay`
+`PATCH http://carerelay.com/api/requests/{request_id}`
 
 ### POST Service Request Details
 Parameter | Default | Description
@@ -764,7 +758,7 @@ This endpoint retrieves a specific Product/Service
 
 ### HTTP Request
 
-`GET http://example.com/kittens/`
+`DELETE http://carerelay.com/api/requests/{request_id}`
 
 ### URL Parameters
 
