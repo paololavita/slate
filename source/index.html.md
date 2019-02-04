@@ -196,7 +196,7 @@ __This endpoint retrieves all Products/Services__
 
 ### HTTP Request
 
-`GET http://carerelay.com/api/carerelay`
+`GET http://carerelay.com/api/products`
 
 ### Query Parameters
 
@@ -275,7 +275,7 @@ __This endpoint retrieves a specific Product/Service__
 
 ### HTTP Request
 
-`GET http://example.com/kittens/`
+`GET http://example.com/api//{product_id}`
 
 ### URL Parameters
 
@@ -426,7 +426,7 @@ This endpoint retrieves a specific Quote/Price
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/`
+`GET http://carerelay.com/api/estimates/price`
 
 ### URL Parameters
 
@@ -524,7 +524,7 @@ This endpoint retrieves a specific Time/Date Estimate.
 
 ### HTTP Request
 
-`DELETE http://example.com/carerelay/`
+`GET http://carerelay.com/api/estimates/time`
 
 ### URL Parameters
 
@@ -588,7 +588,7 @@ This endpoint retrieves all Products/Services
 
 ### HTTP Request
 
-`GET http://carerelay.com/api/carerelay`
+`GET http://carerelay.com/api/requests`
 
 ### POST Service Request Details
 Parameter | Default | Description
@@ -646,7 +646,7 @@ This endpoint retrieves a specific Product/Service
 
 ### HTTP Request
 
-`GET http://example.com/kittens/`
+`GET http://carerelay.com/api/requests/{request_id}`
 
 ### URL Parameters
 
