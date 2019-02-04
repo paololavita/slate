@@ -209,7 +209,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy customer is an authenticated member!
 </aside>
 
-## Get a Product/Service
+## Get a Product/Service Details
 
 ```ruby
 require 'cri'
@@ -285,7 +285,7 @@ ID | The ID of the Product/Service to retrieve
 
 # Query Price/Time
 
-## Get Estimate/Price
+## Get Quotes/Price Estimates
 
 ```ruby
 require 'cri'
@@ -434,7 +434,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
-## Get Time/Date Estimates
+## Get Date/Time Estimates
 
 ```ruby
 require 'cri'
@@ -532,125 +532,6 @@ Parameter | Description
 --------- | -----------
 ID | The ID of carerelay to delete
 
-# Query Products/Services
-
-## List Products/Services
-
-```ruby
-require 'cri'
-
-api = cri::APIClient.authorize!('carecaptain')
-api.kittens.get
-```
-
-```python
-import cri
-
-api = cri.authorize('carecaptain')
-api.kittens.get()
-```
-
-```shell
-curl "http://carerelay.com/api/carerelay"
-  -H "Authorization: carecaptain"
-```
-
-```javascript
-const cri = require('cri');
-
-let api = cri.authorize('carecaptain');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all Products/Services
-
-### HTTP Request
-
-`GET http://carerelay.com/api/carerelay`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_services | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy customer is an authenticated kitten!
-</aside>
-
-## Get a Service Request Details
-
-```ruby
-require 'cri'
-
-api = cri::APIClient.authorize!('carecaptain')
-api.kittens.get(2)
-```
-
-```python
-import cri
-
-api = cri.authorize('carecaptain')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://carerelay.com/api/carerelay/2"
-  -H "Authorization: carecaptain"
-```
-
-```javascript
-const cri = require('cri');
-
-let api = cri.authorize('carecaptain');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint creates a Service Request.
-
-### HTTP Request
-
-`POST http://carerelay.com/request/`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the Product/Service to retrieve
 
 # Create Service Requests
 
@@ -773,9 +654,9 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the Product/Service to retrieve
 
-# Update/Edit Service Requests
+# Update/Edit or Cancel Service Requests
 
-## Update Service Requests
+## Update Service Request
 
 ```ruby
 require 'cri'
@@ -834,7 +715,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy customer is an authenticated kitten!
 </aside>
 
-## Delete Service Request Details by ID
+## Cancel Service Request
 
 ```ruby
 require 'cri'
