@@ -201,10 +201,6 @@ Parameter | Default | Description
 include_services | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
 
-/*<aside class="success">
-Remember — a happy customer is an authenticated member!
-</aside>*/
-
 ## Get a Product/Service Details
 
 ```ruby
@@ -635,8 +631,6 @@ let max = api.kittens.get(2);
 ```
 
 This endpoint retrieves a specific Product/Service.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
