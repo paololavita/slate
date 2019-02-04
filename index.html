@@ -311,10 +311,6 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p>CareRelay expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code>Authorization: carecaptain</code></p>
-
-<aside class="notice">
-You must replace <code>carecaptain</code> with your personal API key.
-</aside>
 <h1 id='query-products-services'>Query Products/Services</h1><h2 id='list-products-services'>List Products/Services</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cri'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">)</span>
@@ -453,9 +449,9 @@ You must replace <code>carecaptain</code> with your personal API key.
 </tr>
 </tbody></table>
 
-<aside class="success">
+<p>/<em><aside class="success">
 Remember — a happy customer is an authenticated member!
-</aside>
+</aside></em>/</p>
 <h2 id='get-a-product-service-details'>Get a Product/Service Details</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cri'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">)</span>
@@ -503,8 +499,6 @@ Remember — a happy customer is an authenticated member!
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p><strong>This endpoint retrieves a specific Product/Service</strong></p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://example.com/api//{product_id}</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
@@ -879,7 +873,7 @@ Remember — a happy customer is an authenticated kitten!
 </span></code></pre>
 <p>This endpoint retrieves all Products/Services</p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET http://carerelay.com/api/carerelay</code></p>
+<p><code>PATCH http://carerelay.com/api/requests/{request_id}</code></p>
 <h3 id='post-service-request-details-2'>POST Service Request Details</h3>
 <table><thead>
 <tr>
@@ -936,7 +930,7 @@ Remember — a happy customer is an authenticated kitten!
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 <h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/</code></p>
+<p><code>DELETE http://carerelay.com/api/requests/{request_id}</code></p>
 <h3 id='url-parameters-5'>URL Parameters</h3>
 <table><thead>
 <tr>
