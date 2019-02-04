@@ -522,7 +522,6 @@ Parameter | Description
 --------- | -----------
 ID | The ID of carerelay to delete
 
-
 # Create Service Requests
 
 ## POST Service Requests
@@ -698,10 +697,6 @@ Parameter | Default | Description
 --------- | ------- | -----------
 include_services | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy customer is an authenticated kitten!
-</aside>
 
 ## Cancel Service Request
 
