@@ -78,6 +78,18 @@ A REST API should be entered with no prior knowledge beyond the initial URI (boo
 
 Another thing which will help you while building RESTful APIs is that query based API results should be represented by a list of links with summary information, not by arrays of original resource representations because query is not a substitute for identification of resources.
 
+# Allowed HTTP Verbs List
+
+HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are  `POST`, `GET`, `PUT`, `PATCH` and `DELETE`. There are a number of other verbs, too, but are utilized less frequently. All APIs MUST only use the verbs listed in the table below.
+
+|  Method   | Action                                              |
+|-----------|---------------------------------------------------------------------------------------------------|
+|  `POST`   | Method requests the server to **create** a resource in the database                 |
+|  `GET`  | Method **requests data** from the resource and should not produce any side effect         |
+|  `PUT`  | Method requests the server to **update** resource or **create** the resource, if it doesn’t exist |
+|  `PATCH`  | Method requests the server to **partially update** resource                     |
+|  `DELETE` | Method requests that the resources, or its instance, **should be removed** from the database    |
+
 # Authentication
 
 > To authorize, use this code:
