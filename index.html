@@ -231,6 +231,9 @@
               </ul>
           </li>
           <li>
+            <a href="#allowed-http-verbs-list" class="toc-h1 toc-link" data-title="Allowed HTTP Verbs List">Allowed HTTP Verbs List</a>
+          </li>
+          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
@@ -342,6 +345,36 @@ Every media type defines a default processing model. For example, HTML defines a
 [Failure here implies that out-of-band information is driving interaction instead of hypertext.]</p>
 
 <p>Another thing which will help you while building RESTful APIs is that query based API results should be represented by a list of links with summary information, not by arrays of original resource representations because query is not a substitute for identification of resources.</p>
+<h1 id='allowed-http-verbs-list'>Allowed HTTP Verbs List</h1>
+<p>HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are  <code>POST</code>, <code>GET</code>, <code>PUT</code>, <code>PATCH</code> and <code>DELETE</code>. There are a number of other verbs, too, but are utilized less frequently. All APIs MUST only use the verbs listed in the table below.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Action</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>POST</code></td>
+<td>Method requests the server to <strong>create</strong> a resource in the database</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td>Method <strong>requests data</strong> from the resource and should not produce any side effect</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>Method requests the server to <strong>update</strong> resource or <strong>create</strong> the resource, if it doesn’t exist</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>Method requests the server to <strong>partially update</strong> resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Method requests that the resources, or its instance, <strong>should be removed</strong> from the database</td>
+</tr>
+</tbody></table>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
