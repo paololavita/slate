@@ -848,8 +848,6 @@ let max = api.kittens.get(2);
 
 This endpoint retrieves a specific Product/Service.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
 ### HTTP Request
 
 `DELETE http://carerelay.com/api/requests/{request_id}`
