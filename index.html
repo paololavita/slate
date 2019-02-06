@@ -318,11 +318,19 @@
 
 <p>According to Roy Fielding:</p>
 
-<p>Hypertext (or hypermedia) mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions. Remember that hypertext does not need to be HTML (or XML or JSON) on a browser. Machines can follow links when they understand the data format and relationship types.</p>
+<aside class="success">
+
+Hypertext (or hypermedia) mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions. Remember that hypertext does not need to be HTML (or XML or JSON) on a browser. Machines can follow links when they understand the data format and relationship types.
+
+</aside>
 
 <p>Further, resource representations shall be self-descriptive: the client does not need to know if a resource is employee or device. It should act on basis of media-type associated with resource. So in practice, you will end up creating lots of custom media-types – normally one media-type associated with one resource.</p>
 
-<p>Every media type defines a default processing model. For example, HTML defines a rendering process for hypertext and the browser behavior around each element. It has no relation to the resource methods GET/PUT/POST/DELETE/… other than the fact that some media type elements will define a process model that goes like “anchor elements with an href attribute create a hypertext link that, when selected, invokes a retrieval request (GET) on the URI corresponding to the CDATA-encoded href attribute.”</p>
+<aside class="success">
+
+Every media type defines a default processing model. For example, HTML defines a rendering process for hypertext and the browser behavior around each element. It has no relation to the resource methods GET/PUT/POST/DELETE/… other than the fact that some media type elements will define a process model that goes like “anchor elements with an href attribute create a hypertext link that, when selected, invokes a retrieval request (GET) on the URI corresponding to the CDATA-encoded href attribute.”
+
+</aside>
 <h3 id='resource-methods'>Resource Methods</h3>
 <p>Other important thing associated with REST is resource methods to be used to perform the desired transition. A large number of people wrongly relate resource methods to HTTP GET/PUT/POST/DELETE methods.</p>
 
@@ -860,7 +868,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 </span></code></pre>
 <p>This endpoint retrieves all Products/Services.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://carerelay.com/api/requests</code></p>
+<p><code>POST http://carerelay.com/api/requests</code></p>
 <h3 id='post-service-request-details'>POST Service Request Details</h3>
 <table><thead>
 <tr>
@@ -880,10 +888,6 @@ curl <span class="s2">"api_endpoint_here"</span>
 <td>If set to false, the result will include kittens that have already been adopted.</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy customer is an authenticated kitten!
-</aside>
 <h2 id='get-service-request-details-by-id'>GET Service Request Details by ID</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cri'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">cri</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'carecaptain'</span><span class="p">)</span>
