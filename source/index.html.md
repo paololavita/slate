@@ -51,11 +51,19 @@ The data format of a representation is known as a media type. The media type ide
 
 According to Roy Fielding:
 
+<aside class="success">
+
 Hypertext (or hypermedia) mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions. Remember that hypertext does not need to be HTML (or XML or JSON) on a browser. Machines can follow links when they understand the data format and relationship types.
+
+</aside>
 
 Further, resource representations shall be self-descriptive: the client does not need to know if a resource is employee or device. It should act on basis of media-type associated with resource. So in practice, you will end up creating lots of custom media-types – normally one media-type associated with one resource.
 
+<aside class="success">
+
 Every media type defines a default processing model. For example, HTML defines a rendering process for hypertext and the browser behavior around each element. It has no relation to the resource methods GET/PUT/POST/DELETE/… other than the fact that some media type elements will define a process model that goes like “anchor elements with an href attribute create a hypertext link that, when selected, invokes a retrieval request (GET) on the URI corresponding to the CDATA-encoded href attribute.”
+
+</aside>
 
 ### Resource Methods
 
@@ -666,17 +674,13 @@ This endpoint retrieves all Products/Services.
 
 ### HTTP Request
 
-`GET http://carerelay.com/api/requests`
+`POST http://carerelay.com/api/requests`
 
 ### POST Service Request Details
 Parameter | Default | Description
 --------- | ------- | -----------
 include_services | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy customer is an authenticated kitten!
-</aside>
 
 ## GET Service Request Details by ID
 
