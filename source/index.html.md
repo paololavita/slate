@@ -130,25 +130,12 @@ CareRelay expects for the API key to be included in all API requests to the serv
 
 ## List Products/Services
 
-```ruby
-require 'cri'
-
-api = cri::APIClient.authorize!('carecaptain')
-api.kittens.get
-```
-
-```python
-import cri
-
-api = cri.authorize('carecaptain')
-api.kittens.get()
-```
+> Example Request
 
 ```shell
 curl "http://carerelay.com/api/carerelay"
   -H "Authorization: carecaptain"
 ```
-> Example Request
 
 ```javascript
 client.createCareRelay({
